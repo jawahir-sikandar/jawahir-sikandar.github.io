@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jawahir Jamal Sikandar | Portfolio</title>
+<meta name="description" content="BS Computer Science student focused on Artificial Intelligence and Computer Vision.">
+<style>
+  :root {
+    --paper: #f6f8f9;
+    --ink: #1b2a33;
+    --muted: #5d6b73;
+    --line: #d9e1e5;
+    --accent: #1f6f8b;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0f171c;
+      --ink: #e6eef2;
+      --muted: #94a5ae;
+      --line: #25343c;
+      --accent: #6cc3de;
+      --card: #16222a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+  header { border-bottom: 1px solid var(--line); }
+  nav { display: flex; gap: 22px; flex-wrap: wrap; padding: 16px 0; font-size: 0.95rem; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+
+  .hero { padding: 64px 0 40px; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 12px;
+    font-weight: 700;
+  }
+  .tagline { font-size: 1.15rem; color: var(--muted); margin: 0 0 24px; max-width: 34em; }
+  .links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 6px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .btn.solid { background: var(--accent); color: var(--paper); }
+  .btn:hover { opacity: 0.85; }
+
+  section { padding: 36px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.6rem; margin: 0 0 16px; }
+  p { margin: 0 0 12px; }
+
+  .project {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .project h3 { margin: 0 0 4px; font-size: 1.15rem; }
+  .status { color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+  .project ul { margin: 0 0 12px; padding-left: 20px; }
+  .project li { margin-bottom: 6px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; padding: 0; list-style: none; }
+  .tags li { border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px; font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+  .rows { list-style: none; margin: 0; padding: 0; }
+  .rows li { display: grid; grid-template-columns: 9em 1fr; gap: 4px 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .rows li:last-child { border-bottom: 0; }
+  .rows .when { color: var(--muted); font-size: 0.95rem; }
+  .rows .what small { display: block; color: var(--muted); }
+  @media (max-width: 520px) { .rows li { grid-template-columns: 1fr; } }
+
+  footer { padding: 28px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO: change the name or tagline here -->
+  <div class="hero">
+    <h1>Jawahir Jamal Sikandar</h1>
+    <p class="tagline">BS Computer Science student at the University of Baltistan, building AI systems that work with camera and video data.</p>
+    <div class="links">
+      <a class="btn solid" href="#projects">See my project</a>
+      <a class="btn" href="https://github.com/jawahir-sikandar">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/jamalsikandar-494bb5379">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <p>I am in the final year of my BS in Computer Science in Skardu, Pakistan, graduating in December 2026. I work mainly in Python, C++ and Java, and I am most interested in Artificial Intelligence and Computer Vision.</p>
+    <p>I am looking for a Master's position where I can continue studying and doing research in Artificial Intelligence.</p>
+  </section>
+
+  <!-- PROJECTS: copy the <div class="project"> block to add another project -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>AI-Integrated Parking Management System</h3>
+      <div class="status">Final Year Project, in progress</div>
+      <p>A system that detects which parking slots are free and which are taken from camera or video feeds, and shows the result to admins and drivers.</p>
+      <ul>
+        <li>Admin dashboard built in React for monitoring slots, availability and parking history.</li>
+        <li>Real-time occupancy detection with YOLO is being designed and implemented.</li>
+        <li>Planned: user interface, live availability count and a database for parking history.</li>
+      </ul>
+      <ul class="tags" aria-label="Technologies">
+        <li>Python</li><li>YOLO</li><li>React</li>
+      </ul>
+      <a href="https://github.com/jawahir-sikandar/AI-integrated-Parking-management-system">View the code on GitHub</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="rows">
+      <li><span class="when">Programming</span><span class="what">Python, C++, Java</span></li>
+      <li><span class="when">AI and vision</span><span class="what">Object detection with YOLO, deep learning fundamentals</span></li>
+      <li><span class="when">Databases</span><span class="what">SQL, relational databases</span></li>
+      <li><span class="when">Web</span><span class="what">React</span></li>
+    </ul>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <ul class="rows">
+      <li>
+        <span class="when">October 2026</span>
+        <span class="what">SQL and Relational Databases 101
+          <small>Cognitive Class, IBM Developer Skills Network</small>
+          <a href="https://courses.cognitiveclass.ai/certificates/63295350b3ae4883b49fe4b26799467a">Verify certificate</a></span>
+      </li>
+      <li>
+        <span class="when">September 2026</span>
+        <span class="what">Deep Learning Fundamentals
+          <small>Cognitive Class, IBM Developer Skills Network</small>
+          <a href="https://courses.cognitiveclass.ai/certificates/baefc1360db1424688b9a38341fe9570">Verify certificate</a></span>
+      </li>
+      <li>
+        <span class="when">September 2026</span>
+        <span class="what">Prompt Engineering for Everyone
+          <small>Cognitive Class, IBM Developer Skills Network</small>
+          <a href="https://courses.cognitiveclass.ai/certificates/c2d006b94e864002b3c118cf19662153">Verify certificate</a></span>
+      </li>
+      <li>
+        <span class="when">Certificate</span>
+        <span class="what">AI for Everyone</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>The best way to reach me is by email.</p>
+    <ul class="rows">
+      <li><span class="when">Email</span><span class="what"><a href="mailto:jawahirjamal99@gmail.com">jawahirjamal99@gmail.com</a></span></li>
+      <li><span class="when">GitHub</span><span class="what"><a href="https://github.com/jawahir-sikandar">github.com/jawahir-sikandar</a></span></li>
+      <li><span class="when">LinkedIn</span><span class="what"><a href="https://www.linkedin.com/in/jamalsikandar-494bb5379">linkedin.com/in/jamalsikandar-494bb5379</a></span></li>
+      <li><span class="when">Location</span><span class="what">Skardu, Pakistan</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Jawahir Jamal Sikandar, 2026</div>
+</footer>
+
+</body>
+</html>
